@@ -15,6 +15,8 @@
   --tertiary-bg-color: #2f303a;
   --secondary-link-color: gba(255, 255, 255, 0.6);
   --secondary-logo-color: #000000;
+  --box-color-gray: #eeeeee;
+  --box-color-portfolio: #ececec;
 }
 .list {
   list-style: none;
@@ -32,11 +34,63 @@ a {
   color: var(--primary-text-color);
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+button {
+  cursor: pointer;
+}
+address {
+  font-style: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* header styles */
 
-.logo {
-  color: var(--accent-color);
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.border {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--box-color-portfolio);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.a {
+  margin: 0;
+}
+.navigation {
+  align-items: center;
+  /* !!!без цього костиля  лого чьомусь не стає по середині!!! */
+}
+.logo {
+  display: block;
+  margin-right: 93px;
+
+  color: var(--accent-color);
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -46,17 +100,37 @@ a {
 .span-logo {
   color: var(--secondary-logo-color);
 }
+.navigation,
+.site-navigation {
+  display: flex;
+}
+
+.header-list {
+  display: flex;
+  margin-left: auto;
+  gap: 50px;
+}
+
+.site-navigation {
+  display: flex;
+  gap: 50px;
+}
+
 .navigation .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
 
   font-weight: 500;
-
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 .contacts .contacts-link {
-  font-weight: 500;
+  display: block;
 
+  font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
@@ -78,6 +152,8 @@ a {
 
 .hero {
   background-color: var(--tertiary-bg-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -88,9 +164,18 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  max-width: 696px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-btn {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   cursor: pointer;
@@ -104,10 +189,39 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
 }
+.container-list {
+  display: flex;
+}
+.container-list {
+  margin-left: 15px;
+  gap: 30px;
+}
+
+.container-benefits {
+  margin-top: 94px;
+}
+.container-title {
+  margin-bottom: 10px;
+}
+
+.container-subtitle {
+  margin-top: 10px;
+  max-width: 270;
+}
+
+.container-doing {
+  margin-top: 94px;
+}
+
+.container-doing-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
 
 .title {
   color: var(--secondary-text-color);
-  
+
   line-height: 1.14;
   letter-spacing: 0.03em;
 }
@@ -126,10 +240,30 @@ a {
   letter-spacing: 0.03em;
 }
 
+.container-team {
+  margin-top: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container-section-list {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
 .team {
   background-color: var(--secondary-bg-color);
 }
 
+.container-team-name {
+  margin-top: 30px;
+}
+
+.team-list-item {
+  background-color: var(--primary-white-color);
+  border-radius: 0px 0px 4px 4px;
+}
 .team-name {
   color: var(--secondary-text-color);
   font-weight: 500;
@@ -139,6 +273,10 @@ a {
   letter-spacing: 0.03em;
 }
 
+.container-team-position {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
 .team-position {
   font-size: 16px;
   line-height: 1.18;
@@ -148,6 +286,12 @@ a {
 
 /* portfolio main */
 
+.container-btn-list {
+  padding-top: 94px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
 .portfolio-section-btn {
   color: var(--secondary-text-color);
   cursor: pointer;
@@ -159,14 +303,41 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.btn-all {
+  display: flex;
+  padding: 6px 25px;
+  /* !!!тут мабуть помилка у макеті бо на цій кнпоці паддінг інший!!! */
+}
 
+.container-btn {
+  display: flex;
+  padding: 6px 22px;
+}
 .portfolio-section-btn:hover,
 .portfolio-section-btn:focus {
   background-color: var(--accent-color);
+  border-color: var(--accent-color);
   color: var(--primary-white-color);
 }
 
+.container-card {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-item {
+  width: 370px;
+  background-color: var(--primary-white-color);
+}
+
 .project-title {
+  margin-left: 24px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -174,13 +345,32 @@ a {
 }
 
 .project-name {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  margin-left: 24px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
 }
+.container-border {
+  padding-top: 20px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--box-color-gray);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: var(--box-color-gray);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--box-color-gray);
+}
 
 /* footer styles */
 
+.container-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .footer {
   background-color: var(--tertiary-bg-color);
 }
@@ -197,7 +387,12 @@ a {
 }
 
 .address {
+  margin-top: 20px;
   font-style: normal;
+}
+
+.container-footer-list {
+  margin-top: 9px;
 }
 .footer-link {
   color: var(--primary-white-color);
