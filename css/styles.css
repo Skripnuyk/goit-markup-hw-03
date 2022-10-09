@@ -335,10 +335,12 @@ img {
 .card-item {
   width: 370px;
   background-color: var(--primary-white-color);
+  border: 1px solid var(--box-color-portfolio);
 }
 
 .project-title {
-  margin-left: 24px;
+  width: 322px;
+  margin: 20px auto 0px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -346,25 +348,13 @@ img {
 }
 
 .project-name {
-  margin-top: 4px;
-  margin-bottom: 20px;
-  margin-left: 24px;
+  width: 322px;
+  margin: 0px auto 20px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
 }
-.container-border {
-  padding-top: 20px;
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: var(--box-color-gray);
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: var(--box-color-gray);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--box-color-gray);
-}
+
 
 /* footer styles */
 
